@@ -1,0 +1,78 @@
+body {
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+.card {
+  display: block;
+  margin: 20px auto;
+  max-width: 70%;
+  background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
+  box-shadow: 1px 1px 10px rgba(108, 135, 183, 0.6);
+  border: none;
+}
+.search-bar {
+  width: 85%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  line-height: 1.9;
+}
+
+h1 {
+  color: white;
+  font-size: 48px;
+}
+p {
+  display: inline;
+  font-size: 20px;
+}
+sup {
+  font-size: 40px;
+}
+hr {
+  margin: 20px auto;
+}
+.current-icon {
+  font-size: 60px;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+.current-temp {
+  font-size: 65px;
+  text-align: left;
+}
+a {
+  color: white;
+}
+a:hover {
+  color: #6a85b6;
+  text-decoration: none;
+}
+.celsius {
+  font-size: 30px;
+  vertical-align: 27px;
+  padding-right: 15px;
+}
+.fahrenheit {
+  font-size: 30px;
+  vertical-align: 27px;
+}
+
+.precipitation-wind {
+  text-align: left;
+  margin-top: 15px;
+  margin-left: 120px;
+}
+.day {
+  text-align: center;
+}
+.small-icon {
+  font-size: 40px;
+  margin: 15px auto;
+}
+.credit {
+  color: rgba(186, 200, 224, 0.6);
+  display: block;
+  font-family: monospace;
+  font-size: 14px;
+  text-align: center;
+}
