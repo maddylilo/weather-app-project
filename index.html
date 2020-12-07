@@ -25,21 +25,21 @@
                         <input type="submit" value="Search" class="btn btn-outline-light px-3 search-button"
                             id="search-button" />
                     </form>
-                    <h1 class="card-title">London</h1>
+                    <h1 class="card-title" id="city"></h1>
                     <p class="card-text" id="currentDayTime">Saturday 11:00</p>
                     <br />
-                    <p>Partly Cloudy</p>
+                    <p id="description"></p>
                     <div class="row">
                         <div class="col-2">
-                            <i class="fas fa-cloud-sun current-icon"></i>
+                            <img src="" id="icon"/>
                         </div>
                         <div class="col-3 current-temp">
-                            <span id="temperatureNow">12</span>
+                            <span id="temperature"></span>
                             <span><a href class="celsius" id="celsius">°C</a><a href class="fahrenheit"
                                     id="fahrenheit">F</a></span>
                         </div>
                         <div class="col-4 precipitation-wind">
-                            <p>Precipitation: 53% <br /> Wind: 12 mph</p>
+                            <p>Wind: <span id="wind"></span> km/h<br />Humidity: <span id="humidity"></span>%</p>
                         </div>
                     </div>
                     <hr>
