@@ -43,10 +43,7 @@ hr {
 a {
   color: white;
 }
-a:hover {
-  color: #6a85b6;
-  text-decoration: none;
-}
+
 .celsius {
   font-size: 30px;
   vertical-align: 27px;
@@ -55,6 +52,11 @@ a:hover {
 .fahrenheit {
   font-size: 30px;
   vertical-align: 27px;
+}
+
+.inactive {
+  color: #6a85b6;
+  text-decoration: none;
 }
 
 .precipitation-wind {
