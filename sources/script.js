@@ -7,6 +7,20 @@ let currentDay = daysOfWeek[now.getDay()];
 let dateTime = document.querySelector("#currentDayTime");
 dateTime.innerHTML = `${currentDay} ${currentHour}:${currentMinutes}`;
 
+
+function formatTime(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
+}
+
 function displayCurrentTemp(response){
   console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
@@ -27,10 +41,31 @@ function displayCurrentTemp(response){
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#hourly-forecast");
+  //let forecast = response.data.list[0];
+  forecastElement.innerHTML = null;
+  let forecast = null;
+  console.log(forecast);
+
+  for (let index = 0; index < 6; index++) {
+    let forecast = response.data.list[index];
+    forecastElement.innerHTML += `
+    <div class="col-2 day">
+      <p class="day-titles">${formatTime(forecast.dt * 1000)}</p> <br />
+      <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" alt="" />
+      <p><strong>${Math.round(forecast.main.temp_max)}°</strong> / ${Math.round(forecast.main.temp_min)}°</p>
+    </div>`
+  }
+}
+
 function search(city) {
   let apiKey = "34d9ed3eeaae24ff1bdbb0e4f7d779cd";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayCurrentTemp);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function handleSubmit(event) {
