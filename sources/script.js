@@ -43,7 +43,6 @@ function displayCurrentTemp(response){
 
 function displayForecast(response) {
   let forecastElement = document.querySelector("#hourly-forecast");
-  //let forecast = response.data.list[0];
   forecastElement.innerHTML = null;
   let forecast = null;
   console.log(forecast);
@@ -54,7 +53,7 @@ function displayForecast(response) {
     <div class="col-2 day">
       <p class="day-titles">${formatTime(forecast.dt * 1000)}</p> <br />
       <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" alt="" />
-      <p><strong>${Math.round(forecast.main.temp_max)}°</strong> / ${Math.round(forecast.main.temp_min)}°</p>
+      <p><strong>${Math.round(forecast.main.temp_max)}°</strong><span class="min"> / ${Math.round(forecast.main.temp_min)}°</span></p>
     </div>`
   }
 }

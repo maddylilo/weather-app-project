@@ -44,6 +44,10 @@ a {
   color: white;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .celsius {
   font-size: 30px;
   vertical-align: 27px;
@@ -67,6 +71,11 @@ a {
 .day {
   text-align: center;
 }
+
+.day-titles {
+  color: #bac7df;
+}
+
 .small-icon {
   font-size: 40px;
   margin: 15px auto;
@@ -77,4 +86,9 @@ a {
   font-family: monospace;
   font-size: 14px;
   text-align: center;
+}
+
+.min {
+  font-weight: lighter;
+  color: #bac7df;
 }
