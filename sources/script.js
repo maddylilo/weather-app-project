@@ -5,7 +5,7 @@ let daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Frida
 let currentDay = daysOfWeek[now.getDay()];
 
 let dateTime = document.querySelector("#currentDayTime");
-dateTime.innerHTML = `${currentDay} ${formatTime}`;
+dateTime.innerHTML = `${currentDay} ${currentHour}:${currentMinutes}`;
 
 
 function formatTime(timestamp) {
