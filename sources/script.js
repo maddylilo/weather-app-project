@@ -18,7 +18,7 @@ function formatTime(timestamp) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  return `${hours}:${minutes}`;
+  return `${hours}:0${minutes}`;
 }
 
 function displayCurrentTemp(response){
